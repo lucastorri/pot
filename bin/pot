@@ -1,1 +1,30 @@
 #!/usr/bin/env ruby
+
+require 'optparse'
+#require_relative '../lib/pot.rb'
+
+
+class PotCLI
+
+  def run
+    done = false
+    parser = OptionParser.new do |opt|
+      opt.on('-v') do
+        p 'no version yet'
+        done = true
+      end
+      opt.parse!
+    end
+
+    send(ARGV[0], *ARGV[1..-1]) if not done and not ARGV.empty?
+  end
+
+  def init project_name
+    p 'init a pot project', project_name
+  end
+
+
+end
+
+pot = PotCLI.new
+pot.run
