@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 require 'rubygems'
 require 'bundler'
 begin
@@ -21,8 +19,6 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ["Lucas Torri","Rubem Nakamura"]  
 end
 Jeweler::RubygemsDotOrgTasks.new
-
-
 
 require 'rdoc/task'
 RDoc::Task.new do |rdoc|
