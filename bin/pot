@@ -6,7 +6,7 @@ require_relative '../lib/pot.rb'
 
 class PotCLI
 
-  def run
+  def initialize
     done = false
     parser = OptionParser.new do |opt|
       opt.on('-v') do
@@ -16,15 +16,43 @@ class PotCLI
       opt.parse!
     end
 
-    send(ARGV[0], *ARGV[1..-1]) if not done and not ARGV.empty?
+    send(ARGV[0], *ARGV[1..-1]) if not done and not ARGV.empty? and ARGV[0] != 'initialize'
   end
 
   def init project_name
-    p 'init a pot project', project_name
+    p "creating pot project #{project_name}"
   end
 
+  def app app_name
+
+  end
+
+  def model project_name, model_name
+
+  end
+
+  def flow project_name, flow_name
+
+  end
+
+  def page project_name, page_name
+
+  end
+
+  def partial project_name, partial_name
+
+  end
+
+  def example project_name, example_name
+
+  end
+
+  def run what
+    #app => run all examples for that spec
+    #app:example => run specific example
+    #...
+  end
 
 end
 
-pot = PotCLI.new
-pot.run
+PotCLI.new
