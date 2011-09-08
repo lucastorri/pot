@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     pot (0.0.1)
+      activesupport
+      bundler
       rubigen
 
 GEM

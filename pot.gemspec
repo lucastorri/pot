@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "rubigen"
+  s.add_runtime_dependency "bundler"
+  s.add_runtime_dependency "activesupport"
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
