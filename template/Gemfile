@@ -1,0 +1,6 @@
+capybara
+rspec2
+fabrication
+
+active_record
+#mongoid
