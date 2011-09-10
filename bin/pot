@@ -2,13 +2,14 @@
 
 require 'rubygems'
 require "bundler/setup"
+require 'pot'
 require 'active_support'
 require 'active_support/core_ext'
 ActiveSupport::Deprecation.silence do
   require 'rubigen' #because it is throwing warning messages
 end
 
-if %w(-v --version).include? ARGV.first  
-  puts "0.01"
+if %w(-v --version).include? ARGV.first
+  puts Pot::VERSION
   exit(0)
 end
